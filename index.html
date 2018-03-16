@@ -27,7 +27,7 @@
 
     <!-- Top Sticky Nev bar -->
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse" id="top-navbar">
 
         <div class="container-fluid">
 
@@ -84,6 +84,16 @@
     <script src="jquery.sticky.js"></script>
 
     <!-- Here goes all the JS/JQuery libraries -->
+
+    <!-- All the JS/JQuery Scripts goes here -->
+
+    <script>
+        $(document).ready(function(){
+            $("#top-navbar").sticky({topSpacing:0});
+        });
+    </script>
+
+    <!-- All the JS/JQuery Scripts goes here -->
 
 
     </body>
