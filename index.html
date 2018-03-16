@@ -11,11 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Here goes all the CSS/Bootstrap libraries -->
-
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-
         <!-- Here goes all the CSS/Bootstrap libraries -->
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -25,8 +23,7 @@
 
     <body>
 
-    <!-- Top Sticky Nev bar -->
-
+    <!-- Top Sticky Nev Bar Start-->
     <nav class="navbar navbar-inverse" id="top-navbar">
 
         <div class="container-fluid">
@@ -69,30 +66,181 @@
         </div>
 
     </nav>
+    <!-- Top Sticky Nev bar End -->
 
-    <!-- Top Sticky Nev bar -->
+    <!-- Top Slider Start -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-    </body>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
 
+            <div class="item active">
+                <figure>
+                    <img src="img/banner/banner-1.jpg" alt="Los Angeles" style="width:100%;">
+                </figure>
+                <div class="carousel-caption">
+                    <h1>Los Angeles</h1>
+                    <p>LA is always so much fun!</p>
+                </div>
+             </div>
+
+            <div class="item">
+                <figure>
+                    <img src="img/banner/banner-2.jpg" alt="Los Angeles" style="width:100%;">
+                </figure>
+                <div class="carousel-caption">
+                    <h1>Chicago</h1>
+                    <p>Thank you, Chicago!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <figure>
+                    <img src="img/banner/banner-3.jpg" alt="Los Angeles" style="width:100%;">
+                </figure>
+                <div class="carousel-caption">
+                    <h1>New York</h1>
+                    <p>We love the Big Apple!</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+    <!-- Top Slider End -->
+
+    <!-- Products Section Start -->
+    <div class="container">
+        <div class="row">
+            <p style="font-size: 60px" class="col-lg-6">Products</p>
+        </div>
+
+        <div class="row">
+            <p style="font-size: 15px" class="col-lg-6">W3Engineers is an interactive web application development and consulting firm that utilizes latest technology, creative design and optimized business strategy to help businesses build their brand.</p>
+        </div>
+
+        <div class="row">
+            <button type="button" class="btn btn-primary">All</button>
+            <button type="button" class="btn btn-primary">App</button>
+            <button type="button" class="btn btn-primary">Game</button>
+            <button type="button" class="btn btn-primary">Blockchain</button>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4 type-1">
+
+                <div class="col-lg-6">
+                    <img src="img/items/item-1.JPG" class="img-responsive">
+                </div>
+
+                <div class="col-lg-6 type-1">
+                    <h3>Meena Game</h3>
+                    <h5>A exciting new game for android platform.</h5>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="col-lg-6">
+                    <img src="img/items/item-2.JPG" class="img-responsive">
+                </div>
+
+                <div class="col-lg-6">
+                    <h3>Bangla browser</h3>
+                    <h5>A exciting new browser for android platform with mesh.</h5>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="col-lg-6">
+                    <img src="img/items/item-3.JPG" class="img-responsive">
+                </div>
+
+                <div class="col-lg-6">
+                    <h3>ETH Wallet</h3>
+                    <h5>A secure and ultra portable wallet for ethirium.</h5>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="col-lg-6">
+                    <img src="img/items/item-4.JPG" class="img-responsive">
+                </div>
+
+                <div class="col-lg-6">
+                    <h3>Bunny Castle</h3>
+                    <h5>A exciting new game for android platform.</h5>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="col-lg-6">
+                    <img src="img/items/item-5.JPG" class="img-responsive">
+                </div>
+
+                <div class="col-lg-6">
+                    <h3>Mobile Data Share</h3>
+                    <h5>A exciting new way to share data for android platform.</h5>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="col-lg-6">
+                    <img src="img/items/item-6.JPG" class="img-responsive">
+                </div>
+
+                <div class="col-lg-6">
+                    <h3>Yo!</h3>
+                    <h5>A new way to connect</h5>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Products Section End -->
 
     <!-- Here goes all the JS/JQuery libraries -->
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="jquery.sticky.js"></script>
-
+    <script src="js/jquery.sticky.js"></script>
     <!-- Here goes all the JS/JQuery libraries -->
 
     <!-- All the JS/JQuery Scripts goes here -->
-
     <script>
         $(document).ready(function(){
             $("#top-navbar").sticky({topSpacing:0});
         });
     </script>
-
     <!-- All the JS/JQuery Scripts goes here -->
 
 

@@ -1,13 +1,26 @@
 
 
 /* ==========================================================================
-   Author's custom styles
+   My custom styles
    ========================================================================== */
 
-
-body{
-    background-color: #0f0f0f;
+body {
+    height: 10000px;
+    padding: 0;
+    margin: 0;
 }
+
+#top-navbar {
+    background: #0f0f0f;
+    color: white;
+    font-size: 18px;
+    line-height: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    width:100%;
+}
+
 
 
 
