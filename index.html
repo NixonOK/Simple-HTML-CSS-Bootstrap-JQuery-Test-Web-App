@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/prograess-bar.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/pie-chart.css">
     <!-- Here goes all the CSS/Bootstrap libraries -->
 
 </head>
@@ -213,6 +214,7 @@
         </div>
 
         <div class="row">
+            <!-- Software Skills Section Start -->
             <div class="col-md-8">
                 <p class="sub-section-header">Software</p>
 
@@ -267,8 +269,10 @@
                 </div>
 
             </div>
+            <!-- Software Skills Section End -->
 
             <div class="row">
+                <!-- Recongnison Section Start -->
                 <div class="col-md-4">
                     <p class="sub-section-header">RECONGNISONS</p>
                     <div class="awards-element">
@@ -285,10 +289,10 @@
                             <p class="sub-section-description">Placed : 1st</p>
                         </div>
                     </div>
-                    
+
                     <div class="awards-element">
                         <div class="col-md-4">
-                            <i class="fa fa-image fa-border" style="font-size:56px;"></i>
+                            <i class="fa fa-camera-retro fa-border" style="font-size:56px;"></i>
                         </div>
                         <div class="col-md-8">
                             <p class="special-section-header">International Award</p>
@@ -300,10 +304,10 @@
                             <p class="sub-section-description">Placed : 1st</p>
                         </div>
                     </div>
-                    
+
                     <div class="awards-element">
                         <div class="col-md-4">
-                            <i class="fa fa-image fa-border" style="font-size:56px;"></i>
+                            <i class="fa fa-id-card fa-border" style="font-size:56px;"></i>
                         </div>
                         <div class="col-md-8">
                             <p class="special-section-header">International Award</p>
@@ -317,13 +321,121 @@
                     </div>
 
                 </div>
-
             </div>
+            <!-- Recongnison Section End -->
         </div>
-
 
     </div>
     <!-- Skills and Knowledge section End -->
+
+    <!-- Language and knowledge section start -->
+    <div class="container">
+        <div class="row">
+            <!-- Language Section Start -->
+            <div class="col-md-8">
+
+                <p class="sub-section-header">Language Skills</p>
+
+                <div class="circular-progress-item col-md-4">
+                    <div class="bar_container">
+                        <div id="main_container">
+                            <div id="pbar" class="progress-pie-chart" data-percent="0">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <progress style="display: none" id="progress_bar" value="0" max="90"></progress>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="circular-progress-item col-md-4">
+                    <div class="bar_container">
+                        <div id="main_container">
+                            <div id="pbar" class="progress-pie-chart" data-percent="0">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <progress style="display: none" id="progress_bar" value="0" max="100"></progress>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="circular-progress-item col-md-4">
+                    <div class="bar_container">
+                        <div id="main_container">
+                            <div id="pbar" class="progress-pie-chart" data-percent="0">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <progress style="display: none" id="progress_bar" value="0" max="100"></progress>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Language Section End -->
+
+            <!-- Knowledge Section Start -->
+            <div class="col-md-4">
+
+                <p class="sub-section-header">KNOWLEDGE</p>
+                <div class="col-md-4">
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                </div>
+                
+                <div class="col-md-4 col-md-offset-4">
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                    <p>&#10003; Android UI</p>
+                </div>
+
+
+            </div>
+            <!-- Knowledge Section End -->
+        </div>
+    </div>
+    <!-- Language and knowledge section end -->
+    
+    <!-- Hobbies Section Start -->
+    <div class="container">
+        <div class="row">
+            <p class="sub-section-header">HOBBIES AND INTERESTES</p>
+        </div>
+    </div>
+    <!-- Hobbies Section End -->
 
     <!-- Here goes all the JS/JQuery libraries -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
@@ -426,6 +538,37 @@
                     filter: filterValue
                 });
             });
+        });
+
+        $(document).ready(function() {
+            var progressbar = $('#progress_bar');
+            max = progressbar.attr('max');
+            time = (1000 / max) * 5;
+            value = progressbar.val();
+
+            var loading = function() {
+                value += 1;
+                addValue = progressbar.val(value);
+
+                $('.progress-value').html(value + '%');
+                var $ppc = $('.progress-pie-chart'),
+                    deg = 360 * value / 100;
+                if (value > 50) {
+                    $ppc.addClass('gt-50');
+                }
+
+                $('.ppc-progress-fill').css('transform', 'rotate(' + deg + 'deg)');
+                $('.ppc-percents span').html(value + '%');
+
+                if (value == max) {
+                    clearInterval(animate);
+                }
+            };
+
+
+            var animate = setInterval(function() {
+                loading();
+            }, time);
         });
     </script>
     <!-- All the JS/JQuery Scripts goes here -->
