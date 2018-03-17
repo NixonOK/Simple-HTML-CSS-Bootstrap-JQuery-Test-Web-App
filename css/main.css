@@ -19,6 +19,10 @@ body {
     width:100%;
 }
 
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
 
 #top-navbar {
     z-index: 999 !important;
