@@ -16,49 +16,78 @@ body {
     font-weight: bold;
     text-align: center;
     padding: 10px;
-    width:100%;
+    width: 100%;
     z-index: 999 !important;
 }
 
-.carousel-control.left, .carousel-control.right {
-   background-image:none !important;
-   filter:none !important;
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none !important;
+    filter: none !important;
 }
 
-.awards-element{
+.awards-element {
     margin-top: 10px;
 }
 
-.section-header{
+.image-text-view-section {
+    margin-top: 30px;
+}
+
+.container-fluid {
+    width: 85%;
+}
+
+.section-header {
     font-size: 60px;
     font-weight: bold;
     margin-top: 60px;
 }
 
-.section-description{
+.section-description {
     font-size: 15px;
     margin-top: 15px;
 }
 
-.image-text-view-section{
-    margin-top: 30px;
-}
 
-.container-fluid{
-    width: 85%;
-}
-
-.sub-section-header{
+.sub-section-header {
     font-size: 30px;
     font-weight: bold;
     margin-top: 30px;
 }
 
-.sub-section-description{
+.sub-section-description {
     font-size: 15px;
 }
 
-.special-section-header{
+.special-section-header {
     font-size: 25px;
     color: darkcyan;
+    font-weight: bold;
+}
+
+@media screen and (max-device-width: 320px) {
+    .section-header {
+        font: 30px;
+    }
+    .section-description {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+
+    .sub-section-header {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+
+    .sub-section-description {
+        font-size: 12px;
+    }
+
+    .special-section-header {
+        font-size: 20px;
+        color: darkcyan;
+    }
 }
