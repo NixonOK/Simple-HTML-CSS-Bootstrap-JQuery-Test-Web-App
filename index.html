@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/prograess-bar.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Here goes all the CSS/Bootstrap libraries -->
 
 </head>
@@ -120,11 +122,11 @@
     <!-- Products Section Start -->
     <div class="container">
         <div class="row">
-            <p style="font-size: 60px" class="col-lg-6">Products</p>
+            <p class="col-md-6 section-header">Products</p>
         </div>
 
         <div class="row">
-            <p style="font-size: 15px" class="col-lg-6">W3Engineers is an interactive web application development and consulting firm that utilizes latest technology, creative design and optimized business strategy to help businesses build their brand.</p>
+            <p class="col-md-6 section-description">W3Engineers is an interactive web application development and consulting firm that utilizes latest technology, creative design and optimized business strategy to help businesses build their brand.</p>
         </div>
 
         <div class="row" style="margin-top: 20px; margin-bottom: 20px">
@@ -200,6 +202,129 @@
     </div>
     <!-- Products Section End -->
 
+    <!-- Skills and Knowledge section Start -->
+    <div class="container">
+        <div class="row">
+            <p class="section-header col-md-10">SKILLS AND KNOWLEDGE</p>
+        </div>
+
+        <div class="row">
+            <p class="section-description col-md-6">W3Engineers is an interactive web application development and consulting firm that utilizes latest technology,</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p class="sub-section-header">Software</p>
+
+                <div class="section-bar">
+                    <p class="sub-section-description">Android</p>
+                    <div id="bar1" class="barfiller">
+                        <div class="tipWrap">
+                            <span class="tip"></span>
+                        </div>
+                        <span class="fill" data-percentage="90"></span>
+                    </div>
+                </div>
+
+                <div class="section-bar">
+                    <p class="sub-section-description">IOS</p>
+                    <div id="bar2" class="barfiller">
+                        <div class="tipWrap">
+                            <span class="tip"></span>
+                        </div>
+                        <span class="fill" data-percentage="80"></span>
+                    </div>
+                </div>
+
+                <div class="section-bar">
+                    <p class="sub-section-description">Mesh</p>
+                    <div id="bar3" class="barfiller">
+                        <div class="tipWrap">
+                            <span class="tip"></span>
+                        </div>
+                        <span class="fill" data-percentage="60"></span>
+                    </div>
+                </div>
+
+                <div class="section-bar">
+                    <p class="sub-section-description">UI/UX</p>
+                    <div id="bar4" class="barfiller">
+                        <div class="tipWrap">
+                            <span class="tip"></span>
+                        </div>
+                        <span class="fill" data-percentage="75"></span>
+                    </div>
+                </div>
+
+                <div class="section-bar">
+                    <p class="sub-section-description">Flutter</p>
+                    <div id="bar5" class="barfiller">
+                        <div class="tipWrap">
+                            <span class="tip"></span>
+                        </div>
+                        <span class="fill" data-percentage="45"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="sub-section-header">RECONGNISONS</p>
+                    <div class="awards-element">
+                        <div class="col-md-4">
+                            <i class="fa fa-image fa-border" style="font-size:56px;"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="special-section-header">International Award</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="sub-section-description">15/12/16</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="sub-section-description">Placed : 1st</p>
+                        </div>
+                    </div>
+                    
+                    <div class="awards-element">
+                        <div class="col-md-4">
+                            <i class="fa fa-image fa-border" style="font-size:56px;"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="special-section-header">International Award</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="sub-section-description">15/12/16</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="sub-section-description">Placed : 1st</p>
+                        </div>
+                    </div>
+                    
+                    <div class="awards-element">
+                        <div class="col-md-4">
+                            <i class="fa fa-image fa-border" style="font-size:56px;"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="special-section-header">International Award</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="sub-section-description">15/12/16</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="sub-section-description">Placed : 1st</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Skills and Knowledge section End -->
+
     <!-- Here goes all the JS/JQuery libraries -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
     <script>
@@ -210,6 +335,7 @@
     <script src="js/main.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
     <!-- Here goes all the JS/JQuery libraries -->
 
     <!-- All the JS/JQuery Scripts goes here -->
@@ -218,6 +344,71 @@
             $("#top-navbar").sticky({
                 topSpacing: 0
             });
+        });
+
+        $('#bar1').barfiller({
+            // color of bar
+            barColor: '#16b597',
+            // shows a tooltip
+            tooltip: true,
+            // duration in ms
+            duration: 1000,
+            // re-animate on resize
+            animateOnResize: true,
+            // custom symbol
+            symbol: "%"
+        });
+
+        $('#bar2').barfiller({
+            // color of bar
+            barColor: '#16b597',
+            // shows a tooltip
+            tooltip: true,
+            // duration in ms
+            duration: 1000,
+            // re-animate on resize
+            animateOnResize: true,
+            // custom symbol
+            symbol: "%"
+        });
+
+        $('#bar3').barfiller({
+            // color of bar
+            barColor: '#16b597',
+            // shows a tooltip
+            tooltip: true,
+            // duration in ms
+            duration: 1000,
+            // re-animate on resize
+            animateOnResize: true,
+            // custom symbol
+            symbol: "%"
+        });
+
+        $('#bar4').barfiller({
+            // color of bar
+            barColor: '#16b597',
+            // shows a tooltip
+            tooltip: true,
+            // duration in ms
+            duration: 1000,
+            // re-animate on resize
+            animateOnResize: true,
+            // custom symbol
+            symbol: "%"
+        });
+
+        $('#bar5').barfiller({
+            // color of bar
+            barColor: '#16b597',
+            // shows a tooltip
+            tooltip: true,
+            // duration in ms
+            duration: 1000,
+            // re-animate on resize
+            animateOnResize: true,
+            // custom symbol
+            symbol: "%"
         });
     </script>
 
@@ -237,10 +428,7 @@
             });
         });
     </script>
-
     <!-- All the JS/JQuery Scripts goes here -->
-
-
 </body>
 
 </html>

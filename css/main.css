@@ -17,6 +17,7 @@ body {
     text-align: center;
     padding: 10px;
     width:100%;
+    z-index: 999 !important;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -24,6 +25,29 @@ body {
    filter:none !important;
 }
 
-#top-navbar {
-    z-index: 999 !important;
+.awards-element{
+    margin-top: 10px;
+}
+
+.section-header{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.section-description{
+    font-size: 15px;
+}
+
+.sub-section-header{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.sub-section-description{
+    font-size: 15px;
+}
+
+.special-section-header{
+    font-size: 25px;
+    color: darkcyan;
 }
