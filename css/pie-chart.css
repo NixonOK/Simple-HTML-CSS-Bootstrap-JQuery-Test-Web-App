@@ -7,7 +7,7 @@ background-color: #E5E5E5;
 position: relative;
 }
 .progress-pie-chart.gt-50 {
-background-color: #81CE97;
+background-color: #0F283E;
 }
 
 .ppc-progress {
@@ -29,7 +29,7 @@ top: calc(50% - 100px);
 width: 200px;
 height: 200px;
 clip: rect(0, 100px, 200px, 0);
-background: #81CE97;
+background: #0F283E;
 transform: rotate(60deg);
 }
 .gt-50 .ppc-progress {
@@ -56,7 +56,7 @@ display: table;
 display: block;
 font-size: 2.6em;
 font-weight: bold;
-color: #81CE97;
+color: #0F283E;
 }
 
 .pcc-percents-wrapper {

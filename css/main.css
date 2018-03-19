@@ -3,7 +3,6 @@
    ========================================================================== */
 
 body {
-    height: 10000px;
     padding: 0;
     margin: 0;
 }
@@ -150,9 +149,70 @@ body {
 .contact_border{
     border: 1px solid #07BCFD;
 }
-body{
-    position: relative;
+
+.btn{
+    width: 122px;
+    height: 40px;
 }
+
+
+.download-bg {
+    transform: skewY(-3deg);
+    background: #000000;
+    height: 500px;
+    position: relative;
+    background-size: cover;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.download-bg:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0F283E;
+    z-index: -1;
+}
+
+.achievements {
+    transform: skewY(3deg);
+    margin: 100px 0px 0px 0px;
+    text-align: center;
+}
+.achievement-item {
+    text-align: center;
+    margin-left: 100px;
+}
+
+.download-item {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #01BAFD;
+    padding: 50px 50px;
+}
+
+.download-count {
+    font-size: 28px;
+    font-family: Roboto-Bold;
+    color: #01BAFD;
+    text-align: center;
+}
+
+.download-text {
+    font-size: 22px;
+    font-family: Roboto-Bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
 
 @media screen and (max-device-width: 320px) {
     .section-header {
