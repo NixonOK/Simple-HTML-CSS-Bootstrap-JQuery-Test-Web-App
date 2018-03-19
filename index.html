@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/prograess-bar.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/pie-chart.css">
+    <link rel="stylesheet" type="text/css" href="CSS/banner_style.css">
     <!-- Here goes all the CSS/Bootstrap libraries -->
 
 </head>
@@ -70,53 +71,38 @@
     <!-- Top Sticky Nev bar End -->
 
     <!-- Top Slider Start -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+    <div class="container_banner" id="home">
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <figure>
-                    <img src="img/banner/banner-1.jpg" alt="Los Angeles" style="width:100%;">
-                </figure>
-                <div class="carousel-caption">
-                    <h1>Los Angeles</h1>
-                    <p>LA is always so much fun!</p>
+        <!--Slider-->
+        <div id="myCarousel8" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="banner_image" src="img/banner/banner-1.jpg" width="100%">
                 </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img src="img/banner/banner-2.jpg" alt="Los Angeles" style="width:100%;">
-                </figure>
-                <div class="carousel-caption">
-                    <h1>Chicago</h1>
-                    <p>Thank you, Chicago!</p>
+                <div class="item">
+                    <img class="banner_image" src="img/banner/banner-2.jpg" width="100%">
                 </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img src="img/banner/banner-3.jpg" alt="Los Angeles" style="width:100%;">
-                </figure>
-                <div class="carousel-caption">
-                    <h1>New York</h1>
-                    <p>We love the Big Apple!</p>
+                <div class="item">
+                    <img class="banner_image" src="img/banner/banner-3.jpg" width="100%">
                 </div>
+
             </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel8" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel8" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <!--Slider End-->
+
+        <!--Banner Caption-->
+        <b class="hdbanner">Something You Love</b>
+        <b class="parabanner">It's Easy When You're Doing Something You Love</b>
+        <button class="btnbanner"><i class="fa fa-download" style="color: #2b542c"></i>DOWNLOAD RESUMES</button>
     </div>
     <!-- Top Slider End -->
 
@@ -633,8 +619,7 @@
         <div class="row">
             <div class="col-md-4">
                 <p class="section-header">MY CUSTOMERS</p>
-                <p class="section-description" style="text-align: right">The best books to keep you reading consectetur adipisicing elit Hic.
-                    laborum, reprehendent, nesciunt sapient assumenda ab beatae velit ea perspiciatis animi unde officia odit.</p>
+                <p class="section-description" style="text-align: right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium ligula vel blandit efficitur. Integer dapibus risus erat, non eleifend dui tristique quis.</p>
             </div>
 
             <div class="col-md-7 col-md-offset-1" align="center">
@@ -643,6 +628,20 @@
         </div>
     </div>
     <!-- My Customers Section End -->
+
+    <!-- Contact Me Section Start -->
+    <div class="row container_contact" id="contact">
+        <div class="contact_me">
+            <b class="contact_head">CONTACT ME</b><br><br>
+            <p class="contact_content">Have a project you'd like to discuss?</p><br>
+            <div class="contact_border"></div><br>
+            <i class="fa fa-comment fa-5x"></i><br>
+            <b class="contact_head">Johnny Doe</b><br>
+            <p class="contact_content">johnnydoe@demo.com</p>
+            <div class="contact_border"></div>
+        </div>
+    </div>
+    <!-- Contact Me Section End -->
 
     <!-- Here goes all the JS/JQuery libraries -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>

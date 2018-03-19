@@ -128,6 +128,32 @@ body {
     font-family: "Arial Black";
 }
 
+.container_contact{
+    background-color: #0F283E;
+    height: 600px;
+    clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+}
+
+.contact_me{
+    padding-left: 40%;
+    padding-top: 200px;
+    text-align: center;
+    padding-right: 40%;
+    color: white;
+}
+.contact_head{
+    font-size: 40px;
+}
+.contact_content{
+    font-size: 20px;
+}
+.contact_border{
+    border: 1px solid #07BCFD;
+}
+body{
+    position: relative;
+}
+
 @media screen and (max-device-width: 320px) {
     .section-header {
         font-size: 30px;
