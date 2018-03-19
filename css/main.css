@@ -26,6 +26,63 @@ body {
     filter: none !important;
 }
 
+
+.work_head{
+    font-family: "Arial Black";
+    font-size: 60px;
+    color: #0F283E;
+
+}
+.work_content{
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 50px;
+}
+
+.month_design{
+    font-size: 20px;
+    color: gray;
+}
+.year_design{
+    font-size: 50px;
+    color: #07BCFD;
+    font-family: "Arial Black";
+}
+
+.horizontal_border{
+    border-left: 1px solid gray;
+    height: 300px;
+    float: right;
+}
+
+.vertical_border{
+    width: 30%;
+    border: 1px solid #07BCFD;
+    margin-left: 100px;
+}
+
+.job_head{
+    font-size: 25px;
+    color: #0F283E;
+    font-family: "Arial Black";
+    margin-bottom: 30px;
+}
+.job_content{
+    font-size: 20px;
+    color: gray;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.angular-background{
+    background: url(../img/ref-back.jpg) no-repeat;
+    background-size: 100%;
+    height: 800px;
+    width: 100%;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+
+
 .awards-element {
     margin-top: 10px;
 }
@@ -42,6 +99,8 @@ body {
     font-size: 60px;
     font-weight: bold;
     margin-top: 60px;
+    font-family: "Arial Black";
+    color: #0F283E;
 }
 
 .section-description {
@@ -54,6 +113,8 @@ body {
     font-size: 30px;
     font-weight: bold;
     margin-top: 30px;
+    font-family: "Arial Black";
+    color: #0F283E;
 }
 
 .sub-section-description {
@@ -64,11 +125,13 @@ body {
     font-size: 25px;
     color: darkcyan;
     font-weight: bold;
+    font-family: "Arial Black";
 }
 
 @media screen and (max-device-width: 320px) {
     .section-header {
-        font: 30px;
+        font-size: 30px;
+        font-family: "Arial Black";
     }
     .section-description {
         font-size: 12px;
