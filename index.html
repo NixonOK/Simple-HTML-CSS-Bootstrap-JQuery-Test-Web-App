@@ -102,7 +102,7 @@
         <!--Banner Caption-->
         <b class="hdbanner">Something You Love</b>
         <b class="parabanner">It's Easy When You're Doing Something You Love</b>
-        <button class="btnbanner"><i class="fa fa-download" style="color: #2b542c"></i>DOWNLOAD RESUMES</button>
+        <button class="btnbanner"><i class="fa fa-download" style="color: #0F283E"></i>DOWNLOAD RESUMES</button>
     </div>
     <!-- Top Slider End -->
 
@@ -351,22 +351,22 @@
         <div class="download-bg col-md-12">
             <div class="achievements">
                 <div class="achievement-item col-md-2 col-sm-2 col-xs-2">
-                    <i class="download-item img-circle fa fa-code" style="font-size:56px; color: white"></i>
+                    <i class="download-item img-circle fa fa-firefox go-round-yo" style="font-size:56px; color: white"></i>
                     <h1 class="download-count">230</h1>
                     <h2 class="download-text">HAPPY CUSTOMER</h2>
                 </div>
                 <div class="achievement-item col-md-2 col-sm-2 col-xs-2">
-                    <i class="download-item img-circle fa fa-font-awesome" style="font-size:56px;  color: white"></i>
+                    <i class="download-item img-circle fa fa-dribbble go-round-yo" style="font-size:56px;  color: white"></i>
                     <h1 class="download-count">4100</h1>
                     <h1 class="download-text">AWARDS WON</h1>
                 </div>
                 <div class="achievement-item col-md-2 col-sm-2 col-xs-2">
-                    <i class="download-item img-circle fa fa-chrome" style="font-size:56px;  color: white"></i>
+                    <i class="download-item img-circle fa fa-chrome go-round-yo" style="font-size:56px;  color: white"></i>
                     <h1 class="download-count">24</h1>
                     <h1 class="download-text">AWARDS WON</h1>
                 </div>
                 <div class="achievement-item col-md-2 col-sm-2 col-xs-2">
-                    <i class="download-item img-circle fa fa-codiepie" style="font-size:56px;  color: white"></i>
+                    <i class="download-item img-circle fa fa-codiepie go-round-yo" style="font-size:56px;  color: white"></i>
                     <h1 class="download-count">4100</h1>
                     <h1 class="download-text">AWARDS WON</h1>
                 </div>
@@ -691,6 +691,14 @@
             $("#top-navbar").sticky({
                 topSpacing: 0
             });
+        });
+
+        var $rot = $('.go-round-yo');
+        var $win = $(window);
+
+        $win.on('scroll', function(){
+            var top = $win.scrollTop();
+            $rot.css('transform', 'rotate(' + top + 'deg)');
         });
 
         $('#bar1').barfiller({
