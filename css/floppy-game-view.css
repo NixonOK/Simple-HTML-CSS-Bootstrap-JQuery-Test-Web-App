@@ -15,7 +15,7 @@ body {
     height: 500px;
     position: relative;
     background-size: cover;
-    margin-top: 100px;
+    margin-top: 20px;
     margin-bottom: 100px;
 }
 
@@ -34,8 +34,16 @@ body {
     position: absolute;
     height: 130px;
     width: 50px;
-    background-color: red;
+    background-color: white;
     right: -50px;
+}
+
+.pole1 {
+    position: absolute;
+    height: 130px;
+    width: 50px;
+    background-color: white;
+    right: -150px;
 }
 
 #pole_1 {
@@ -46,20 +54,23 @@ body {
     bottom: 0;
 }
 
+#pole_3 {
+    top: 0;
+}
+
+#pole_4 {
+    bottom: 0;
+}
+
 #score_div {
     text-align: center;
     font-size: 40px;
 }
 
-#restart_btn {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 20px;
-    background-color: fuchsia;
-    color: white;
-    font-size: 35px;
-    border: none;
-    cursor: pointer;
-    display: none;
+#restart_btn{
+    visibility: hidden;
+}
+
+#game_over{
+    transform: skewY(3deg);
 }
