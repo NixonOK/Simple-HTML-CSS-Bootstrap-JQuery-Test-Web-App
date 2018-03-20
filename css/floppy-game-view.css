@@ -68,6 +68,7 @@ body {
 }
 
 #restart_btn{
+    margin-top: -60px;
     visibility: hidden;
 }
 
