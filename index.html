@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/pie-chart.css">
     <link rel="stylesheet" type="text/css" href="CSS/banner_style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/floppy-game-view.css">
     <!-- Here goes all the CSS/Bootstrap libraries -->
 
 </head>
@@ -110,8 +111,7 @@
     <div class="container-fluid">
         <div class="row" id="work">
             <b class="work_head">WORK EXPERIENCE</b><br>
-            <p class="work_content">I'm looking to expand my portfolio while I'm on top and while I'm young Johnny doe<br>
-                brings your content to life in stunning clarity</p>
+            <p class="work_content">I'm looking to expand my portfolio while I'm on top and while I'm young Johnny doe<br> brings your content to life in stunning clarity</p>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -120,8 +120,7 @@
                 <p class="year_design">2016 - PRESENT</p>
                 <hr class="vertical_border"><br>
                 <p class="job_head">Graphic Corner</p><br>
-                <p class="job_content">2013-2014 SENIOR GRAPHIC DESIGNER<br>
-                    2014-2015 PROJECT MANAGER</p>
+                <p class="job_content">2013-2014 SENIOR GRAPHIC DESIGNER<br> 2014-2015 PROJECT MANAGER</p>
             </div>
             <div class="col-md-8">
                 <p class="job_head">JOB DESCRIPTION</p>
@@ -153,8 +152,7 @@
                 <p class="year_design">2016 - 2010</p>
                 <hr class="vertical_border"><br>
                 <p class="job_head">Creatika Agency</p>
-                <p class="job_content">2006-2018 SENIOR GRAPHIC DESIGNER<br>
-                    2008-2010 PROJECT MANAGER</p>
+                <p class="job_content">2006-2018 SENIOR GRAPHIC DESIGNER<br> 2008-2010 PROJECT MANAGER</p>
             </div>
             <div class="col-md-8">
                 <p class="job_head">JOB DESCRIPTION</p>
@@ -166,8 +164,7 @@
         </div>
         <div class="row">
             <p class="work_head">EDUCATION</p>
-            <p class="work_content">I'm looking to expand my portfolio while I'm on top and while I'm young Johnny doe<br>
-                brings your content to life in stunning clarity</p>
+            <p class="work_content">I'm looking to expand my portfolio while I'm on top and while I'm young Johnny doe<br> brings your content to life in stunning clarity</p>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -213,8 +210,7 @@
                 <img src="img/img3.jpg">
             </div>
             <div class="col-md-10">
-                <p class="profile_des" style="margin-top: 100px; font-size: 30px; color: white">"As always, great creative thinking for the best solution. Johnny is by far the most professional and knowledgeable provider I worked with.
-                    I will hire him again :)"</p>
+                <p class="profile_des" style="margin-top: 100px; font-size: 30px; color: white">"As always, great creative thinking for the best solution. Johnny is by far the most professional and knowledgeable provider I worked with. I will hire him again :)"</p>
             </div>
         </div>
     </div>
@@ -250,8 +246,8 @@
                     <p class="sub-section-header">Branding</p>
                     <p class="sub-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet gravida ex. Sed sollicitudin eros purus, sit amet cursus sapien sagittis at.</p>
                 </div>
-                
-                <div class="col-md-12 col-sm-12 col-xs-12"  align="center">
+
+                <div class="col-md-12 col-sm-12 col-xs-12" align="center">
                     <p class="sub-section-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet gravida ex. Sed sollicitudin eros purus, sit amet cursus sapien sagittis at.</p>
                     <img src="img/tab.jpg" alt="#"></img>
                 </div>
@@ -658,6 +654,30 @@
     </div>
     <!-- My Customers Section End -->
 
+    <!-- Floppy Bird Section Start -->
+
+    <div id="game-container">
+
+        <div id="bird"></div>
+
+        <div id="pole_1" class="pole"></div>
+        <div id="pole_2" class="pole"></div>
+        
+        <div id="pole_3" class="pole"></div>
+        <div id="pole_4" class="pole"></div>
+
+    </div>
+
+    <div id="score_div">
+        <p><b>Score: </b><span id="score">0</span></p>
+        <p><b>Speed: </b><span id="speed">10</span></p>
+    </div>
+
+    <button id="restart_btn">Restart</button>
+
+    </div>
+    <!-- Floopy Bird Section End -->
+
     <!-- Contact Me Section Start -->
     <div class="row container_contact" id="contact">
         <div class="contact_me">
@@ -683,6 +703,7 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.barfiller.js"></script>
+    <script src="js/game-controller.js"></script>
     <!-- Here goes all the JS/JQuery libraries -->
 
     <!-- All the JS/JQuery Scripts goes here -->
@@ -696,7 +717,7 @@
         var $rot = $('.go-round-yo');
         var $win = $(window);
 
-        $win.on('scroll', function(){
+        $win.on('scroll', function() {
             var top = $win.scrollTop();
             $rot.css('transform', 'rotate(' + top + 'deg)');
         });
@@ -783,35 +804,35 @@
             });
         });
 
-$(document).ready(function() {
-  
-  var scrollLink = $('.scroll');
-  
-  // Smooth scrolling
-  scrollLink.click(function(e) {
-    e.preventDefault();
-    $('body,html').animate({
-      scrollTop: $(this.hash).offset().top
-    }, 1000 );
-  });
-  
-  // Active link switching
-  $(window).scroll(function() {
-    var scrollbarLocation = $(this).scrollTop();
-    
-    scrollLink.each(function() {
-      
-      var sectionOffset = $(this.hash).offset().top - 20;
-      
-      if ( sectionOffset <= scrollbarLocation ) {
-        $(this).parent().addClass('active');
-        $(this).parent().siblings().removeClass('active');
-      }
-    })
-    
-  })
-  
-})
+        $(document).ready(function() {
+
+            var scrollLink = $('.scroll');
+
+            // Smooth scrolling
+            scrollLink.click(function(e) {
+                e.preventDefault();
+                $('body,html').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+
+            // Active link switching
+            $(window).scroll(function() {
+                var scrollbarLocation = $(this).scrollTop();
+
+                scrollLink.each(function() {
+
+                    var sectionOffset = $(this.hash).offset().top - 20;
+
+                    if (sectionOffset <= scrollbarLocation) {
+                        $(this).parent().addClass('active');
+                        $(this).parent().siblings().removeClass('active');
+                    }
+                })
+
+            })
+
+        })
 
         $(document).ready(function() {
             var progressbar = $('#progress_bar');
