@@ -36,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">W3 Engineers</a>
+                <a class="navbar-brand scroll" href="#home">W3 Engineers</a>
             </div>
 
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
@@ -44,24 +44,24 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" class="active" data-toggle="dropdown" href="#">About<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Gallery</a></li>
+                            <li><a class="scroll" href="#home">Technology</a></li>
+                            <li><a class="scroll" href="#reference">Gallery</a></li>
                             <li><a href="#">Social Activity</a></li>
                             <li><a href="#">Blog</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Product</a></li>
+                    <li><a class="scroll" href="#work">Service</a></li>
+                    <li><a class="scroll" href="#products">Product</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" class="active" data-toggle="dropdown" href="#">Career<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Training</a></li>
+                            <li><a class="scroll" href="#skills">Training</a></li>
                             <li><a href="#">Forum</a></li>
                             <li><a href="#">Jobs</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Blockchain</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a class="scroll" href="#knowledge">Blockchain</a></li>
+                    <li><a class="scroll" href="#contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -222,7 +222,7 @@
 
     <!-- Skills and Expertise Section Start -->
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" id="skills">
             <div class="col-md-5 col-sm-6 col-xs-12" align="right">
                 <p class="section-header">SKILLS AND EXPERTISE</p>
                 <p class="section-description">Game Developer, Application Maker.</p>
@@ -263,7 +263,7 @@
     <!-- Skills and Expertise Section End -->
 
     <!-- Products Section Start -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="products">
         <div class="row">
             <p class="col-md-6 section-header">Products</p>
         </div>
@@ -501,7 +501,7 @@
     <!-- Skills and Knowledge section End -->
 
     <!-- Language and knowledge section start -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="knowledge">
         <div class="row">
             <!-- Language Section Start -->
             <div class="col-md-8">
@@ -782,6 +782,36 @@
                 });
             });
         });
+
+$(document).ready(function() {
+  
+  var scrollLink = $('.scroll');
+  
+  // Smooth scrolling
+  scrollLink.click(function(e) {
+    e.preventDefault();
+    $('body,html').animate({
+      scrollTop: $(this.hash).offset().top
+    }, 1000 );
+  });
+  
+  // Active link switching
+  $(window).scroll(function() {
+    var scrollbarLocation = $(this).scrollTop();
+    
+    scrollLink.each(function() {
+      
+      var sectionOffset = $(this.hash).offset().top - 20;
+      
+      if ( sectionOffset <= scrollbarLocation ) {
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+      }
+    })
+    
+  })
+  
+})
 
         $(document).ready(function() {
             var progressbar = $('#progress_bar');
